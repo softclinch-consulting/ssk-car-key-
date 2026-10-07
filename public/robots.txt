@@ -1,0 +1,6 @@
+# Robots.txt for SSK Keys Shop
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sskkeysshop.com/sitemap.xml

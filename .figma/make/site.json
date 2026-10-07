@@ -1,0 +1,17 @@
+{
+  "title": "SSK Keys Shop | Best Duplicate Key Maker & Car Key Service in Nungambakkam, Chennai",
+  "description": "Looking for duplicate keys in Nungambakkam, Chennai? SSK Keys Shop provides fast duplicate key making for cars, bikes, homes, smart sensor keys & padlocks. 24/7 service & best price!",
+  "robots": {
+    "index": true
+  },
+  "icons": {
+    "icon": "/ssk-logo.jpg"
+  },
+  "openGraph": {
+    "image": "/ssk-logo.jpg"
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
