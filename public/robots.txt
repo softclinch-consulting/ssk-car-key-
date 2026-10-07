@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://sskkeysshop.com/sitemap.xml
+Sitemap: https://sskcarkeys.in/sitemap.xml
