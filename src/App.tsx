@@ -31,6 +31,7 @@ const services = [
     icon: "door" as IconName,
     number: "01",
     title: "House Duplicate Keys",
+    image: "/images/house-keys.jpg",
     text: "Get duplicate keys for compatible homes, apartments, rooms, doors and gates.",
     cta: "Check Availability",
   },
@@ -38,6 +39,7 @@ const services = [
     icon: "building" as IconName,
     number: "02",
     title: "Office & Commercial Keys",
+    image: "/images/office-keys.jpg",
     text: "Additional keys for compatible offices, shops and commercial spaces.",
     cta: "Enquire Now",
   },
@@ -45,6 +47,7 @@ const services = [
     icon: "gate" as IconName,
     number: "03",
     title: "Shop & Gate Keys",
+    image: "/images/shutter-keys.jpg",
     text: "Duplicate keys for compatible shops, gates, shutters and padlocks.",
     cta: "Check Availability",
   },
@@ -52,6 +55,7 @@ const services = [
     icon: "car" as IconName,
     number: "04",
     title: "Car Duplicate Keys",
+    image: "/images/car-keys.jpg",
     text: "Vehicle key duplication depends on the model, key type and programming requirements.",
     cta: "Check Car Key Availability",
   },
@@ -59,6 +63,7 @@ const services = [
     icon: "bike" as IconName,
     number: "05",
     title: "Bike & Scooter Keys",
+    image: "/images/bike-keys.jpg",
     text: "Duplicate or replacement options for compatible two-wheeler keys.",
     cta: "Check Availability",
   },
@@ -66,6 +71,7 @@ const services = [
     icon: "spark" as IconName,
     number: "06",
     title: "Specialised Keys",
+    image: "/images/specialised-keys.jpg",
     text: "Selected specialised key services based on compatibility and security requirements.",
     cta: "Ask About Your Key",
   },
@@ -380,7 +386,7 @@ const keyTypesData: KeyItem[] = [
     name: "Standard House & Room Door Key",
     category: "home",
     categoryName: "House / Door",
-    image: "/images/dimple-keys.jpg",
+    image: "/images/house-keys.jpg",
     badge: "Instant 3 Mins",
     visualIdentifier: "Traditional brass or nickel key with jagged saw-tooth teeth along the bottom edge",
     speed: "3 - 5 mins",
@@ -394,7 +400,7 @@ const keyTypesData: KeyItem[] = [
     name: "Office Shutter & Heavy Padlock Key",
     category: "home",
     categoryName: "Commercial / Shop",
-    image: "/images/laser-cutting.jpg",
+    image: "/images/shutter-keys.jpg",
     badge: "Heavy Duty",
     visualIdentifier: "Heavy thick brass shank, cruciform cross blade, or deep pin tumbler profile",
     speed: "5 - 10 mins",
@@ -407,28 +413,28 @@ const keyTypesData: KeyItem[] = [
 
 const galleryShowcase = [
   {
-    title: "Car Smart Keys & Flip Remote Coding",
-    tag: "AUTOMOTIVE",
-    image: "/images/car-keys.jpg",
-    desc: "Comprehensive key blanks and transponder coding station for all Indian and imported vehicle models.",
-  },
-  {
-    title: "High-Security Dimple & Padlock Keys",
-    tag: "RESIDENTIAL & COMMERCIAL",
-    image: "/images/dimple-keys.jpg",
-    desc: "Computerised dimple key duplication for Godrej, Yale, Mul-T-Lock, and heavy brass padlocks.",
-  },
-  {
-    title: "Two-Wheeler & Scooter Key Duplication",
-    tag: "BIKES & SCOOTERS",
-    image: "/images/bike-keys.jpg",
-    desc: "Precision duplicate keys for Activa, Royal Enfield, Yamaha, TVS, and magnetic shutter keys.",
-  },
-  {
     title: "Computerised CNC Laser Key Cutting",
     tag: "PRECISION MACHINERY",
     image: "/images/laser-cutting.jpg",
     desc: "High-speed automated CNC laser milling equipment providing 100% original-spec accuracy.",
+  },
+  {
+    title: "Car Transponder & Smart Key Programming",
+    tag: "CAR KEY CODING",
+    image: "/images/key-programming.jpg",
+    desc: "Advanced diagnostic tablet key programming and transponder chip cloning station for all car models.",
+  },
+  {
+    title: "5,000+ Key Blanks Inventory & Master Craftsmen",
+    tag: "SSK WORKSHOP",
+    image: "/images/workshop-inventory.jpg",
+    desc: "Huge selection of original key blanks for all automobiles, door locks, and padlocks cut by veteran technicians.",
+  },
+  {
+    title: "Specialised High-Security & Calibrated Keys",
+    tag: "SECURITY LOCKS",
+    image: "/images/specialised-keys.jpg",
+    desc: "Precision milling setup for Godrej dimple keys, tubular ace keys, and cruciform 4-way cross keys.",
   },
 ];
 
@@ -829,7 +835,13 @@ export default function App() {
           <div className="service-grid">
             {services.map((service) => (
               <article className="service-card" key={service.title}>
-                <div className="card-top"><span className="service-icon"><Icon name={service.icon} size={30} /></span><span>{service.number}</span></div>
+                <div className="service-card-media">
+                  <img src={service.image} alt={service.title} loading="lazy" />
+                  <span className="service-card-badge">{service.number}</span>
+                </div>
+                <div className="card-top">
+                  <span className="service-icon"><Icon name={service.icon} size={24} /></span>
+                </div>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
                 <button onClick={() => { track("service_click", { service: service.title }); openQuote(service.title.replace("Duplicate Keys", "key").replace("Keys", "key")); }}>{service.cta}<Icon name="arrow" size={18} /></button>
