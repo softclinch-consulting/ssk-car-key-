@@ -20,8 +20,8 @@ type IconName =
   | "user"
   | "whatsapp";
 
-const PHONE_NUMBER = (import.meta.env.VITE_PHONE_NUMBER || "9884533459").trim();
-const WHATSAPP_NUMBER = (import.meta.env.VITE_WHATSAPP_NUMBER || "919884533459").replace(/\D/g, "");
+const PHONE_NUMBER = (import.meta.env.VITE_PHONE_NUMBER || "7358333459").trim();
+const WHATSAPP_NUMBER = (import.meta.env.VITE_WHATSAPP_NUMBER || "917358333459").replace(/\D/g, "");
 const QUOTE_ENDPOINT = (import.meta.env.VITE_QUOTE_ENDPOINT || "").trim();
 const BUSINESS_NAME =
   (import.meta.env.VITE_BUSINESS_NAME || "").trim() || "SSK Keys Shop";
@@ -238,7 +238,7 @@ function ActionButtons({
   if (compact) {
     return (
       <>
-        <button className="sticky-action sticky-action--whatsapp" onClick={whatsapp}><Icon name="whatsapp" size={18} /><span>WhatsApp 9884533459</span></button>
+        <button className="sticky-action sticky-action--whatsapp" onClick={whatsapp}><Icon name="whatsapp" size={18} /><span>WhatsApp 73583 33459</span></button>
         <button className="sticky-action sticky-action--call" onClick={call}><Icon name="phone" size={18} /><span>Call</span></button>
         <button className="sticky-action sticky-action--primary" onClick={onQuote}><Icon name="arrow" size={18} /><span>Get Quote</span></button>
       </>
@@ -246,8 +246,8 @@ function ActionButtons({
   }
   return (
     <div className="button-row">
-      <button className="button button--whatsapp" onClick={whatsapp}><Icon name="whatsapp" />WhatsApp 9884533459</button>
-      <button className="button button--primary" onClick={call}><Icon name="phone" />Call 9884533459</button>
+      <button className="button button--whatsapp" onClick={whatsapp}><Icon name="whatsapp" />WhatsApp 73583 33459</button>
+      <button className="button button--primary" onClick={call}><Icon name="phone" />Call 73583 33459</button>
       <button className="button button--glass" onClick={onQuote}>Get a Quote <Icon name="arrow" /></button>
     </div>
   );
@@ -548,7 +548,7 @@ function KeyIdentifierWidget({ onSelectKey }: { onSelectKey: (keyName: string) =
               onClick={() => openWhatsApp(activeKey.whatsappMessage)}
             >
               <Icon name="whatsapp" size={20} />
-              <span>WhatsApp 9884533459</span>
+              <span>WhatsApp 73583 33459</span>
             </button>
             <button
               className="button button--glass"
@@ -566,7 +566,7 @@ function KeyIdentifierWidget({ onSelectKey }: { onSelectKey: (keyName: string) =
         </div>
         <div className="banner-copy">
           <h3>Can't Find Your Key? Just Send a Photo on WhatsApp!</h3>
-          <p>Snap a quick picture of your key with your phone and send it to <strong>9884533459</strong>. Our master key technician will identify the exact blank and give you an instant quote in 2 minutes!</p>
+          <p>Snap a quick picture of your key with your phone and send it to <strong>73583 33459</strong>. Our master key technician will identify the exact blank and give you an instant quote in 2 minutes!</p>
         </div>
         <a
           href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello SSK Keys Shop, I am sending a photo of my key. Please check availability and price.")}`}
@@ -576,7 +576,7 @@ function KeyIdentifierWidget({ onSelectKey }: { onSelectKey: (keyName: string) =
           onClick={() => track("banner_whatsapp_photo_click")}
         >
           <Icon name="whatsapp" size={20} />
-          <span>Send Photo to 9884533459</span>
+          <span>Send Photo to 73583 33459</span>
         </a>
       </div>
     </section>
@@ -611,7 +611,7 @@ function GalleryShowcase() {
                 className="gallery-whatsapp-link"
               >
                 <Icon name="whatsapp" size={16} />
-                <span>Enquire via WhatsApp 9884533459</span>
+                <span>Enquire via WhatsApp 73583 33459</span>
               </a>
             </div>
           </article>
@@ -628,7 +628,7 @@ function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       className="floating-whatsapp"
-      aria-label="Chat on WhatsApp 9884533459"
+      aria-label="Chat on WhatsApp 73583 33459"
       onClick={() => track("floating_whatsapp_click")}
     >
       <span className="floating-whatsapp-pulse" />
@@ -637,7 +637,7 @@ function FloatingWhatsApp() {
       </span>
       <span className="floating-whatsapp-text">
         <strong>WhatsApp Us</strong>
-        <small>9884533459</small>
+        <small>73583 33459</small>
       </span>
     </a>
   );
@@ -760,7 +760,7 @@ export default function App() {
             onClick={() => setMenuOpen(false)}
           >
             <Icon name="whatsapp" size={16} />
-            <span>WhatsApp 9884533459</span>
+            <span>WhatsApp 73583 33459</span>
           </a>
           <button className="button button--primary nav-cta" onClick={() => openQuote()}>Get a Duplicate Key</button>
         </nav>
@@ -785,14 +785,14 @@ export default function App() {
                 rel="noopener noreferrer"
                 onClick={() => track("whatsapp_click", { source: "hero" })}
               >
-                <Icon name="whatsapp" /> WhatsApp 9884533459
+                <Icon name="whatsapp" /> WhatsApp 73583 33459
               </a>
               <a
                 className="button button--glass"
                 href={`tel:${PHONE_NUMBER}`}
                 onClick={() => track("phone_click", { source: "hero" })}
               >
-                <Icon name="phone" /> Call 9884533459
+                <Icon name="phone" /> Call 73583 33459
               </a>
             </div>
             <p className="microcopy hero-reveal hero-reveal--4"><Icon name="shield" size={17} />Check key availability, service options and pricing based on your key type.</p>
